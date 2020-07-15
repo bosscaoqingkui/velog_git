@@ -49,7 +49,6 @@ public class AccountRealm extends AuthorizingRealm {
             throw new LockedAccountException("账户已被锁定");
         }
 
-        Map<String,String> map = new HashMap<String,String>();
         AccountProfile profile = new AccountProfile();
         BeanUtil.copyProperties(user, profile);
 
